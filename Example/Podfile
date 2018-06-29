@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SKCollectionView_Example' do
+  pod 'SKCollectionView', :path => '../'
+
+  target 'SKCollectionView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

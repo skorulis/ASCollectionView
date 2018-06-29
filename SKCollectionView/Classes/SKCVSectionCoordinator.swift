@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class SKCVSectionCoordinator: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+public class SKCVSectionCoordinator: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     var sections = [SKCVSectionController]()
     

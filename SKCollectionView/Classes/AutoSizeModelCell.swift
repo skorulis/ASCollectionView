@@ -13,7 +13,6 @@ public protocol AutoSizeModelCell: SimpleModelCell {
 
 public extension AutoSizeModelCell {
     
-    
     public static func calculateSize(model:ModelType?, collectionView:UICollectionView) -> CGSize {
         var view = (sizingCell as! UIView)
         if let cell = sizingCell as? UICollectionViewCell {

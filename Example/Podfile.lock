@@ -1,0 +1,16 @@
+PODS:
+  - SKCollectionView (0.1.0)
+
+DEPENDENCIES:
+  - SKCollectionView (from `../`)
+
+EXTERNAL SOURCES:
+  SKCollectionView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SKCollectionView: 11a22345ddb20efa172e61a1ba352c347b3a2035
+
+PODFILE CHECKSUM: c3f688c0e4f8e0275493a8e4d413fd8b0bdf9151
+
+COCOAPODS: 1.5.0

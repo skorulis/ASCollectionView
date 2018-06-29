@@ -1,0 +1,22 @@
+{
+  "name": "SKCollectionView",
+  "version": "0.1.0",
+  "summary": "A short description of SKCollectionView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/skorulis/SKCollectionView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "skorulis": "skorulis@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/skorulis/SKCollectionView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SKCollectionView/Classes/**/*"
+}

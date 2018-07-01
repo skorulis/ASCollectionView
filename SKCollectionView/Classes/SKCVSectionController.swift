@@ -7,6 +7,8 @@
 
 import UIKit
 
+public typealias SectionCountBlock = (UICollectionView,Int) -> Int
+
 public class SKCVSectionController: NSObject {
 
     public var fixedSize:CGSize?
@@ -21,7 +23,7 @@ public class SKCVSectionController: NSObject {
     public var didSelectItemAt: ((UICollectionView,IndexPath) -> () )?
     public var viewForSupplementaryElementOfKind: ((UICollectionView,String,IndexPath) -> UICollectionReusableView)?
     public var willDisplaySupplementaryView: ((UICollectionView,UICollectionReusableView,String,IndexPath) -> ())?
-    public var numberOfItemsInSection: ((UICollectionView,Int) -> Int)?
+    public var numberOfItemsInSection: SectionCountBlock?
     public var simpleNumberOfItemsInSection: (() ->Int)?
     
     public var sizeForItemAt: ((UICollectionView,UICollectionViewLayout, IndexPath) -> CGSize)?

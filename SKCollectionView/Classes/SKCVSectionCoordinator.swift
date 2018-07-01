@@ -10,6 +10,7 @@ import UIKit
 public class SKCVSectionCoordinator: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     var sections = [SKCVSectionController]()
+    public weak var collectionView: UICollectionView?
     
     //MARK: Section management
     
@@ -27,6 +28,13 @@ public class SKCVSectionCoordinator: NSObject, UICollectionViewDelegate, UIColle
     
     public func remove(section:SKCVSectionController) {
         sections = sections.filter { $0 != section }
+    }
+    
+    public var preReloadBlock:(() -> ())?
+    
+    public func reloadData() {
+        self.preReloadBlock?()
+        collectionView?.reloadData()
     }
     
     //MARK: UICollectionView overrides

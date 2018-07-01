@@ -39,4 +39,50 @@ public extension AutoSizeModelCell {
             return calculateSize(model: withModel, collectionView: collectionView)
         }
     }
+    
+    static func defaultSection(getModel:@escaping (IndexPath) -> ModelType?,getCount:@escaping SectionCountBlock, collectionView:UICollectionView) -> SKCVSectionController {
+        let section = SKCVSectionController()
+        updateSection(section: section, getModel: getModel, getCount: getCount, collectionView: collectionView)
+        return section
+    }
+    
+    static func defaultSection(items:[ModelType], collectionView:UICollectionView) -> SKCVSectionController {
+        let section = SKCVSectionController()
+        
+        return section
+    }
+    
+    //This could possibly be rolled into the one above
+    static func defaultSection(object:ModelType,collectionView:UICollectionView) -> SKCVSectionController {
+        let section = SKCVSectionController()
+        self.updateSection(section: section, object: object, collectionView: collectionView)
+        return section
+    }
+    
+    static func updateSection(section:SKCVSectionController,getModel:@escaping (IndexPath) -> ModelType?,getCount:@escaping SectionCountBlock, collectionView:UICollectionView) {
+        collectionView.register(clazz: self as! AnyClass)
+        section.numberOfItemsInSection = getCount
+        section.cellForItemAt = { (collectionView:UICollectionView,indexPath:IndexPath) in
+            let cell = curriedDefaultCell(getModel: getModel)(collectionView,indexPath)
+            return cell as! UICollectionViewCell
+        }
+        
+        section.sizeForItemAt = curriedCalculateSize(getModel: getModel)
+    }
+    
+    static func updateSection(section:SKCVSectionController,object:ModelType,collectionView:UICollectionView) {
+        collectionView.register(clazz: self as! AnyClass)
+        section.fixedCellCount = 1
+        section.cellForItemAt = { (collectionView:UICollectionView,indexPath:IndexPath) in
+            let cell = curriedDefaultCell(withModel: object)(collectionView,indexPath)
+            return cell as! UICollectionViewCell
+        }
+        
+        section.sizeForItemAt = curriedCalculateSize(withModel: object)
+    }
+    
+    static func updateSection(section:SKCVSectionController,items:[ModelType], collectionView:UICollectionView) {
+        //let getModel = items
+    }
+    
 }

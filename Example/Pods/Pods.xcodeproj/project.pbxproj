@@ -17,6 +17,7 @@
 		E7FDBA966B1BC83DB7C6703AF09B067A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F58F1D6985CEE54FC2C6B8AF7F2CA173 /* SKCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE299A41C18DF05B8E5EB72D73EC4FA0 /* SKCollectionView-dummy.m */; };
 		FA10720620E7268A0046C756 /* SKCVFlowLayoutCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10720520E7268A0046C756 /* SKCVFlowLayoutCollectionViewController.swift */; };
+		FA10722F20E884C90046C756 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10722E20E884C90046C756 /* ArrayExtensions.swift */; };
 		FA20AB1A20E61FC500F0FFAF /* SimpleModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20AB1920E61FC500F0FFAF /* SimpleModelCell.swift */; };
 		FA20AB1C20E6202D00F0FFAF /* AutoSizeModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20AB1B20E6202D00F0FFAF /* AutoSizeModelCell.swift */; };
 		FAE12E0120E6170D00F9FA77 /* SKCVSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE12E0020E6170D00F9FA77 /* SKCVSectionController.swift */; };
@@ -77,6 +78,7 @@
 		DE299A41C18DF05B8E5EB72D73EC4FA0 /* SKCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKCollectionView-dummy.m"; sourceTree = "<group>"; };
 		E0228733A46B88E95B1E211396F3E0EB /* Pods-SKCollectionView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SKCollectionView_Tests.modulemap"; sourceTree = "<group>"; };
 		FA10720520E7268A0046C756 /* SKCVFlowLayoutCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKCVFlowLayoutCollectionViewController.swift; path = SKCollectionView/Classes/SKCVFlowLayoutCollectionViewController.swift; sourceTree = "<group>"; };
+		FA10722E20E884C90046C756 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = SKCollectionView/Classes/ArrayExtensions.swift; sourceTree = "<group>"; };
 		FA20AB1920E61FC500F0FFAF /* SimpleModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SimpleModelCell.swift; path = SKCollectionView/Classes/SimpleModelCell.swift; sourceTree = "<group>"; };
 		FA20AB1B20E6202D00F0FFAF /* AutoSizeModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AutoSizeModelCell.swift; path = SKCollectionView/Classes/AutoSizeModelCell.swift; sourceTree = "<group>"; };
 		FAE12E0020E6170D00F9FA77 /* SKCVSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKCVSectionController.swift; path = SKCollectionView/Classes/SKCVSectionController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				FA20AB1920E61FC500F0FFAF /* SimpleModelCell.swift */,
 				FA20AB1B20E6202D00F0FFAF /* AutoSizeModelCell.swift */,
 				FA10720520E7268A0046C756 /* SKCVFlowLayoutCollectionViewController.swift */,
+				FA10722E20E884C90046C756 /* ArrayExtensions.swift */,
 			);
 			name = SKCollectionView;
 			path = ../..;
@@ -381,6 +384,7 @@
 				FA20AB1C20E6202D00F0FFAF /* AutoSizeModelCell.swift in Sources */,
 				FAE12E0920E61A8500F9FA77 /* SKCVSectionCoordinator.swift in Sources */,
 				FA20AB1A20E61FC500F0FFAF /* SimpleModelCell.swift in Sources */,
+				FA10722F20E884C90046C756 /* ArrayExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

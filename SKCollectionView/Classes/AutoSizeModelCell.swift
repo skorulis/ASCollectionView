@@ -40,6 +40,12 @@ public extension AutoSizeModelCell {
         }
     }
     
+    public static func curriedCalculateReferenceSize(withModel:ModelType?) -> (UICollectionView,UICollectionViewLayout, Int) -> CGSize {
+        return { collectionView,layout,section in
+            return calculateSize(model: withModel, collectionView: collectionView)
+        }
+    }
+    
     static func defaultSection(getModel:@escaping (IndexPath) -> ModelType?,getCount:@escaping SectionCountBlock, collectionView:UICollectionView) -> SKCVSectionController {
         let section = SKCVSectionController()
         updateSection(section: section, getModel: getModel, getCount: getCount, collectionView: collectionView)
@@ -48,7 +54,7 @@ public extension AutoSizeModelCell {
     
     static func defaultSection(items:[ModelType], collectionView:UICollectionView) -> SKCVSectionController {
         let section = SKCVSectionController()
-        
+        updateSection(section: section, items: items, collectionView: collectionView)
         return section
     }
     
@@ -82,7 +88,16 @@ public extension AutoSizeModelCell {
     }
     
     static func updateSection(section:SKCVSectionController,items:[ModelType], collectionView:UICollectionView) {
-        //let getModel = items
+        updateSection(section: section, getModel: items.getRow, getCount: items.sectionCount, collectionView: collectionView)
+    }
+    
+    static func updateSectionHeader(section:SKCVSectionController, model:ModelType, kind:String,collectionView:UICollectionView) {
+        collectionView.register(clazz: self as! AnyClass, forKind: kind)
+        section.viewForSupplementaryElementOfKind = { collectionView,kind,indexPath in
+            let header = defaultSupplementaryView(collectionView: collectionView, indexPath: indexPath, kind: kind, model: model)
+            return header as! UICollectionReusableView
+        }
+        section.referenceSizeForHeader = curriedCalculateReferenceSize(withModel: model)
     }
     
 }

@@ -20,6 +20,13 @@ public extension SimpleModelCell {
         return cell
     }
     
+    public static func defaultSupplementaryView(collectionView:UICollectionView,indexPath:IndexPath,kind:String,model:ModelType?) -> Self {
+        let ident = String(describing: Self.self)
+        var cell:Self = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: ident, for: indexPath) as! Self
+        cell.model = model
+        return cell
+    }
+    
     public static func curriedDefaultCell(withModel: ModelType?) -> (UICollectionView,IndexPath) -> Self {
         return { collectionView,indexPath in
             return defaultCell(collectionView: collectionView, indexPath: indexPath, model: withModel)

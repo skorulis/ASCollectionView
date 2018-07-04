@@ -20,6 +20,7 @@
 		FA10722F20E884C90046C756 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10722E20E884C90046C756 /* ArrayExtensions.swift */; };
 		FA20AB1A20E61FC500F0FFAF /* SimpleModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20AB1920E61FC500F0FFAF /* SimpleModelCell.swift */; };
 		FA20AB1C20E6202D00F0FFAF /* AutoSizeModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20AB1B20E6202D00F0FFAF /* AutoSizeModelCell.swift */; };
+		FAC0999D20ED75060082BE06 /* ModelChangeFeedbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0999C20ED75060082BE06 /* ModelChangeFeedbackCell.swift */; };
 		FAE12E0120E6170D00F9FA77 /* SKCVSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE12E0020E6170D00F9FA77 /* SKCVSectionController.swift */; };
 		FAE12E0520E6194700F9FA77 /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE12E0420E6194700F9FA77 /* CollectionViewExtensions.swift */; };
 		FAE12E0920E61A8500F9FA77 /* SKCVSectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE12E0820E61A8500F9FA77 /* SKCVSectionCoordinator.swift */; };
@@ -81,6 +82,7 @@
 		FA10722E20E884C90046C756 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = SKCollectionView/Classes/ArrayExtensions.swift; sourceTree = "<group>"; };
 		FA20AB1920E61FC500F0FFAF /* SimpleModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SimpleModelCell.swift; path = SKCollectionView/Classes/SimpleModelCell.swift; sourceTree = "<group>"; };
 		FA20AB1B20E6202D00F0FFAF /* AutoSizeModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AutoSizeModelCell.swift; path = SKCollectionView/Classes/AutoSizeModelCell.swift; sourceTree = "<group>"; };
+		FAC0999C20ED75060082BE06 /* ModelChangeFeedbackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModelChangeFeedbackCell.swift; path = SKCollectionView/Classes/ModelChangeFeedbackCell.swift; sourceTree = "<group>"; };
 		FAE12E0020E6170D00F9FA77 /* SKCVSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKCVSectionController.swift; path = SKCollectionView/Classes/SKCVSectionController.swift; sourceTree = "<group>"; };
 		FAE12E0420E6194700F9FA77 /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewExtensions.swift; path = SKCollectionView/Classes/CollectionViewExtensions.swift; sourceTree = "<group>"; };
 		FAE12E0820E61A8500F9FA77 /* SKCVSectionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SKCVSectionCoordinator.swift; path = SKCollectionView/Classes/SKCVSectionCoordinator.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				804D56196E8871E95D5CA664FFC9E713 /* Support Files */,
 				FAE12E0020E6170D00F9FA77 /* SKCVSectionController.swift */,
 				FAE12E0420E6194700F9FA77 /* CollectionViewExtensions.swift */,
+				FAC0999C20ED75060082BE06 /* ModelChangeFeedbackCell.swift */,
 				FAE12E0820E61A8500F9FA77 /* SKCVSectionCoordinator.swift */,
 				FA20AB1920E61FC500F0FFAF /* SimpleModelCell.swift */,
 				FA20AB1B20E6202D00F0FFAF /* AutoSizeModelCell.swift */,
@@ -384,6 +387,7 @@
 				FA20AB1C20E6202D00F0FFAF /* AutoSizeModelCell.swift in Sources */,
 				FAE12E0920E61A8500F9FA77 /* SKCVSectionCoordinator.swift in Sources */,
 				FA20AB1A20E61FC500F0FFAF /* SimpleModelCell.swift in Sources */,
+				FAC0999D20ED75060082BE06 /* ModelChangeFeedbackCell.swift in Sources */,
 				FA10722F20E884C90046C756 /* ArrayExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,8 @@ public typealias SectionCountBlock = (UICollectionView,Int) -> Int
 
 public class SKCVSectionController: NSObject {
 
+    public var sectionId:String
+    
     public var fixedSize:CGSize?
     public var fixedHeight:CGFloat?
     public var fixedCellCount:Int = 1
@@ -28,6 +30,10 @@ public class SKCVSectionController: NSObject {
     
     public var sizeForItemAt: ((UICollectionView,UICollectionViewLayout, IndexPath) -> CGSize)?
     public var referenceSizeForHeader: ((UICollectionView,UICollectionViewLayout, Int) -> CGSize)?
+    
+    public override init() {
+        self.sectionId = UUID().uuidString
+    }
     
     public convenience init(fixedHeight:CGFloat,cellForItemAt:((UICollectionView,IndexPath) -> UICollectionViewCell)!) {
         self.init()

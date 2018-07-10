@@ -5,14 +5,14 @@
 //  Created by Alexander Skorulis on 5/7/18.
 //
 
-protocol ModelChangeFeedbackCell: SimpleModelCell {
+public protocol ModelChangeFeedbackCell: SimpleModelCell {
     
     var modelDidChangeBlock: ((ModelType) -> ())? {get set}
     
 }
 
 
-extension ModelChangeFeedbackCell {
+public extension ModelChangeFeedbackCell {
     
     public static func willDisplayCellBlock(change:@escaping (ModelType) -> () ) -> (UICollectionView,UICollectionViewCell,IndexPath) -> () {
         let block:(UICollectionView,UICollectionViewCell,IndexPath) -> () = {(collectionView,cell,indexPath) in

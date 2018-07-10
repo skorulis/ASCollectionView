@@ -37,6 +37,22 @@ public class SKCVSectionCoordinator: NSObject, UICollectionViewDelegate, UIColle
         collectionView?.reloadData()
     }
     
+    public func reload(sectionId:String) {
+        let index = sections.index { (section) -> Bool in
+            return section.sectionId == sectionId
+        }!
+        UIView.performWithoutAnimation {
+            self.collectionView?.reloadSections(IndexSet(integer:index))
+        }
+    }
+    
+    public func reload(section:SKCVSectionController) {
+        let index = sections.index(of:section)!
+        UIView.performWithoutAnimation {
+            self.collectionView?.reloadSections(IndexSet(integer:index))
+        }
+    }
+    
     //MARK: UICollectionView overrides
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
